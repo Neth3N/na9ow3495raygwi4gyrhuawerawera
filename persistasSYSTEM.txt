@@ -8,3 +8,4 @@ try {
 } catch {
     Write-Error "Error: Failed to create the scheduled task 'dvrUpdateHandler'."
 }
+Write-Output "Success: The scheduled task 'dvrUpdateHandler' has been created successfully."
