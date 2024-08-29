@@ -61,5 +61,5 @@ try {
 
 $filedLL = "$env:tmp\DvrAmrDiag.dll"
 if (Test-Path $filedLL) {
-write-host "file already exists on disk!"
+write-host -foregroundcolor red "file already exists on disk!"
 }
